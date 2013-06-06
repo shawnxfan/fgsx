@@ -9,5 +9,5 @@ QT Creator在软件中心安装
 
 项目下载命令：
 ---
-git clone https://<user>:<password>@github.com/fannyandfly/[fgsx|fgsb].git
+git clone https://&lt;user&gt;:&lt;password&gt;@github.com/fannyandfly/[fgsx|fgsb].git
 
