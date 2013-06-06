@@ -1,13 +1,12 @@
 #include <QCoreApplication>
-#include <QTextStream>
-#include <iostream>
+#include "MyIO.h"
+
+QTextStream cin(stdin, QIODevice::ReadOnly);
+QTextStream cout(stdout, QIODevice::WriteOnly);
+QTextStream cerr(stderr, QIODevice::WriteOnly);
 
 QString getInput()
 {
-    QTextStream cin(stdin, QIODevice::ReadOnly);
-    QTextStream cout(stdout, QIODevice::WriteOnly);
-    QTextStream cerr(stderr, QIODevice::WriteOnly);
-
     QString input;
     cin>>input;
     return input;
@@ -15,13 +14,8 @@ QString getInput()
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QString a = "xxx";
 
-    QTextStream cin(stdin, QIODevice::ReadOnly);
-    QTextStream cout(stdout, QIODevice::WriteOnly);
-    QTextStream cerr(stderr, QIODevice::WriteOnly);
-
-    cout<<getInput()<<endl;//fgsb
-
-    return a.exec();
+    cin >> a;
+    cout<<a<<endl;//fgsb
 }
