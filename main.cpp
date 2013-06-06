@@ -37,7 +37,7 @@ void sendMesg()
 
 int main(int argc, char *argv[])
 {
-    // QCoreApplication a(argc, argv);
+    QCoreApplication a(argc, argv);
 
     QString a = "xxx";
 
@@ -54,5 +54,5 @@ int main(int argc, char *argv[])
     }
 
 
-    // return a.exec();
+    return a.exec();
 }
