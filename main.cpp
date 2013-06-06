@@ -11,5 +11,6 @@ int main(int argc, char *argv[])
     QTextStream cerr(stderr, QIODevice::WriteOnly);
 
     cout<<"xfxsnihao!!"<<endl;
+    //nihao
     return a.exec();
 }
