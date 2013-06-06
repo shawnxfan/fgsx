@@ -11,5 +11,6 @@
 项目下载命令：
 ---
 git clone https://&lt;user&gt;:&lt;password&gt;@github.com/fannyandfly/[fgsx|fgsb].git
+
 git branch --set-upstream master origin/master
 
