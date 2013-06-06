@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     QTextStream cout(stdout, QIODevice::WriteOnly);
     QTextStream cerr(stderr, QIODevice::WriteOnly);
 
-    cout<<getInput()<<endl;//xxx
+    cout<<getInput()<<endl;//fgsb
 
     return a.exec();
 }
