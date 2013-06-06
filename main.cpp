@@ -10,6 +10,6 @@ int main(int argc, char *argv[])
     QTextStream cout(stdout, QIODevice::WriteOnly);
     QTextStream cerr(stderr, QIODevice::WriteOnly);
 
-    cout<<"nihao!!"<<endl;
+    cout<<"xxxxsnihao!!"<<endl;
     return a.exec();
 }
