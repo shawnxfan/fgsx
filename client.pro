@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core network
 
 QT       -= gui
 
@@ -21,4 +21,5 @@ OTHER_FILES += \
     README.md
 
 HEADERS += \
-    MyIO.h
+    MyIO.h \
+    header.h
