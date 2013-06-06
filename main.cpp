@@ -22,5 +22,6 @@ int main(int argc, char *argv[])
     QTextStream cerr(stderr, QIODevice::WriteOnly);
 
     cout<<getInput()<<endl;
+
     return a.exec();
 }
