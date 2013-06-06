@@ -1,58 +1,25 @@
 #include <QCoreApplication>
 #include "MyIO.h"
-#include <QTcpSocket>
+#include <Client.h>
 
 QTextStream cin(stdin, QIODevice::ReadOnly);
 QTextStream cout(stdout, QIODevice::WriteOnly);
 QTextStream cerr(stderr, QIODevice::WriteOnly);
 
-QString getInput()
-{
-    QString input;
-    cin>>input;
-    return input;
-}
-
-void connectServer()
-{
-    QTcpSocket *m_tcpSocket = new QTcpSocket(this);
-    m_tcpSocket->abort();
-    m_tcpSocket->connectToHost("192.168.1.178",19999);
-    connect(m_tcpSocket,SIGNAL(readyRead),this,SLOT(readMesg()));
-}
-
-void readMesg()
-{
-    QByteArray qba =   m_tcpSocket->readAll();
-
-    qDebug()<<qba;
-    QString ss=QVariant(qba).toString();
-}
-
-void sendMesg()
-{
-    QString ss= getInput();
-    m_tcpSocket->write(ss.toStdString().c_str(),strlen(ss.toStdString().c_str()));
-}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+    Client client;
 
-    QString a = "xxx";
-
-    cin >> a;
-    cout<<a<<endl;//fgsb
-
-
+    client.connectServer();
     while(true) {
-        cout << sock.readAll();
+        cout << client.m_tcpSocket->readAll();
         QString str;
         cin >> str;
-        sock.write(str);
-        sock.flush();
+        client.m_tcpSocket->write(str.toStdString().c_str(),strlen(str.toStdString().c_str()));
+        client.m_tcpSocket->flush();
     }
-
 
     return a.exec();
 }

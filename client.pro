@@ -15,11 +15,12 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    Client.cpp
 
 OTHER_FILES += \
     README.md
 
 HEADERS += \
     MyIO.h \
-    header.h
+    Client.h

@@ -2,6 +2,7 @@
 #define MYIO_H
 
 #include <QTextStream>
+#include <iostream>
 
 extern QTextStream cin;
 extern QTextStream cout;
